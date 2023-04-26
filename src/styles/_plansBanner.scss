@@ -1,0 +1,46 @@
+.plansBanner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background-image: url("./../../public/img/expertbanner.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 1;
+        width: 100%;
+        max-width: $containerMaxWidth;
+        padding: $containerPadding;
+    }
+
+    &__info {
+        width: 100%;
+        max-width: 598px;
+    }
+
+    &__title {
+        font-family: $poppinsFont;
+        font-weight: $bold;
+        font-size: $fontSizeExpertTitle;
+        color: white;
+    }
+}
+
+@media (max-width: 1020px) {
+    .plansBanner {
+        height: 200px;
+        &__title {
+            font-size: $fontSizeExpertTitle - 0.8;
+        }
+    }
+}
+

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad</title>
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="shortcut icon" href="./public/img/favicon.svg" type="image/x-icon">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLR51XN4ZF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-KLR51XN4ZF');
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <article class="header__container">
+            <a href="index.html" class="header__logo">
+                <img src="./public/img/logoheader.svg" alt="">
+            </a>
+            <nav class="header__nav">
+                <a class="header__item" href="index.html">
+                    <p>Inicio</p>
+                </a>
+                <a class="header__item" href="plans.html">
+                    <p>Planes</p>
+                </a>
+                <a class="header__item" href="form.html">
+                    <p>Nosotros</p>
+                </a>
+                <a href="form.html" class="header__item"><img src="./public/img/searchiconheader.svg" alt=""></a>
+                <a href="form.html" class="header__item"><img src="./public/img/usericonheader.svg" alt=""></a>
+            </nav>
+        </article>
+    </header>
+    <main class="main main--darkBlue">
+        <form class="form">
+            <article class="form__container">
+                <section class="form__info">
+                    <h2 class="form__title">
+                        ¡Te damos la bienvenida a nuestra comunidad!
+                    </h2>
+                    <p class="form__text">
+                        Amplia tu conocimiento en maquillaje e intercambia experiencias en la comunidad más grande el
+                        maquillaje. Solo déjanos tus datos y permanece atento(a) a nuestro lanzamiento con grandes
+                        beneficios.
+                    </p>
+                    <section class="note">
+                        <p class="note__title">Nota:</p>
+                        <div class="note__message">
+                            <p>Tranquilo(a) 😉 no te molestaremos con tanta información agobiante de publicidad. </p>
+                        </div>
+                    </section>
+                    <section class="form__fields">
+                        <div class="input">
+                            <label for="name">Nombre</label>
+                            <input type="text" name="name" id="" placeholder="Nombre completo" required>
+                        </div>
+                        <div class="input">
+                            <label for="email">Correo</label>
+                            <input type="email" name="email" id="" placeholder="Correo electrónico" required>
+                        </div>
+                    </section>
+                    <button class="button button--yellow form__btn">
+                        <p>Estoy interesado(a) en recibir información</p>
+                    </button>
+                </section>
+                <section class="form__image">
+                    <img src="./public/img/formphoto.png" alt="">
+                </section>
+            </article>
+        </form>
+    </main>
+    <footer class="footer">
+        <article class="siteMap">
+            <section class="siteMap__container">
+                <section class="siteMap__title">
+                    <p>Tú eliges ser parte de esta revolución del maquillaje</p>
+                </section>
+                <section class="siteMap__content siteMap__content--normal">
+                    <section class="siteMap__column">
+                        <p>Space Glam</p>
+                        <p>Enseña en Space Glam</p>
+                        <p>¿Quiénes somos?</p>
+                        <p>Ponte en contacto con nosotros</p>
+                    </section>
+                    <section class="siteMap__column">
+                        <p>Comunidad</p>
+                        <p>Asesoría personalizada</p>
+                        <p>Ayuda y asistencia</p>
+                        <p>Documentación</p>
+                    </section>
+                    <section class="siteMap__column">
+                        <p>Condiciones</p>
+                        <p>Política de privacidad</p>
+                        <p>Síguenos en redes</p>
+                        <div class="siteMap__networks">
+                            <a href=""><img src="./public/img/facebook.svg" alt=""></a>
+                            <a href="https://www.instagram.com/spaceglamrev/"><img src="./public/img/instagram.svg"
+                                    alt=""></a>
+                        </div>
+                    </section>
+                </section>
+                <section class="siteMap__content siteMap__content--responsive">
+                    <section class="siteMap__column">
+                        <p>Space Glam</p>
+                        <p>Enseña en Space Glam</p>
+                        <p>¿Quiénes somos?</p>
+                        <p>Ponte en contacto con nosotros</p>
+                    </section>
+                    <section class="siteMap__column">
+                        <p>Condiciones</p>
+                        <p>Política de privacidad</p>
+                        <p>Síguenos en redes</p>
+                        <div class="siteMap__networks">
+                            <a><img src="./public/img/facebook.svg" alt=""></a>
+                            <a href="https://www.instagram.com/spaceglamrev/"><img src="./public/img/instagram.svg"
+                                    alt=""></a>
+                        </div>
+                    </section>
+                    <section class="siteMap__column">
+                        <p>Comunidad</p>
+                        <p>Asesoría personalizada</p>
+                        <p>Ayuda y asistencia</p>
+                        <p>Documentación</p>
+                    </section>
+                </section>
+            </section>
+        </article>
+        <article class="copyRight">
+            <section class="copyRight__container">
+                <img src="./public/img/logofooter.svg" alt="">
+                <p>©2021 Space GLam</p>
+            </section>
+        </article>
+    </footer>
+    <div class="modal hidden">
+        <section class="modal__container">
+            <section class="modal__box">
+                <section class="modal__content">
+                    <h4 class="modal__title">
+                        ¡Tu información ha sido registrada con éxito!
+                    </h4>
+                    <img class="modal__emoji" src="./public/img/emoji.svg" alt="Happy">
+                    <p class="modal__text">
+                        Pronto recibirás un correo con toda la información respectiva
+                    </p>
+                </section>
+                <div class="modal__closeBtn">
+                    <img src="./public/img/equis.svg" alt="">
+                </div>
+            </section>
+        </section>
+    </div>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-analytics.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-firestore.js";
+        import { collection, doc, addDoc, setDoc, query, where, getDocs } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyB1s9J_ZqnSv02_-Ip02G_7JwEB8F83Row",
+            authDomain: "space-glam.firebaseapp.com",
+            projectId: "space-glam",
+            storageBucket: "space-glam.appspot.com",
+            messagingSenderId: "118360549803",
+            appId: "1:118360549803:web:d65db5cec9c15414e9caee",
+            measurementId: "G-QZQRSD2RW3"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getFirestore(app);
+
+        const body = document.querySelector("body")
+        const modal = document.querySelector(".modal")
+        const modalcloseBtn = modal.querySelector(".modal__closeBtn")
+        const form = document.querySelector(".form")
+        const submitBtn = form.querySelector(".form__btn")
+
+        modalcloseBtn.addEventListener('click', () => {
+            modal.classList.add("hidden")
+            body.classList.remove("noOverflow")
+        })
+
+        async function register(newName, newEmail) {
+            try {
+                const docRef = await addDoc(collection(db, "users"), {
+                    username: newName,
+                    useremail: newEmail,
+                    date: Date.now()
+                });
+                //console.log("Document written with ID: ", docRef.id);
+            } catch (e) {
+                //console.error("Error adding document: ", e);
+            }
+        }
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault()
+            const name = form.name.value
+            const email = form.email.value
+            submitBtn.disabled = true;
+            register(name, email).then((ref) => {
+                submitBtn.disabled = false;
+                modal.classList.remove("hidden")
+                body.classList.add("noOverflow")
+                form.name.value = ""
+                form.email.value = ""
+            });
+        })
+        
+        /*let userList = []
+        const q = query(collection(db, "users"))
+        const querySnapshot = await getDocs(q);
+        querySnapshot.forEach((doc) => {
+            userList.push(doc.data())
+            //console.log(doc.id, " => ", doc.data());
+        });
+        console.log(userList.length)*/
+    </script>
+</body>
+
+</html>

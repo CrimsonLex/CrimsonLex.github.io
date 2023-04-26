@@ -1,0 +1,124 @@
+.footerBanner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+
+    &__container {
+        width: 100%;
+        max-width: $containerMaxWidth;
+        padding: $containerPadding;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: fit-content;
+        background-image: url("./../../public/img/expertbannerbg.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-y: center;
+        background-position-x: right;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 540px;
+        justify-content: center;
+    }
+
+    &__title {
+        font-family: $poppinsFont;
+        font-size: $fontSizeTitle;
+        color: $purple;
+        line-height: 1.25;
+        margin-bottom: 40px;
+    }
+
+    &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 20px;
+        img {
+            width: 100%;
+            max-width: 450px;
+        }
+    }
+
+    &__transition {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 50px;
+
+        img {
+            width: 100%;
+            max-width: none;
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 1160px) {
+    .footerBanner__image {
+        padding: 30px 10px;
+    }
+}
+
+@media (max-width: 1060px) {
+    .footerBanner__image {
+        padding: 30px 10px;
+
+        img {
+            max-width: 410px;
+        }
+    }
+}
+
+@media (max-width: 1020px) {
+    .footerBanner {
+        padding-top: 20px 0;
+
+        &__container {
+            flex-wrap: wrap;
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+            background-position-y: top;
+            background-position-x: center;
+            background-size: 40%;
+        }
+
+        &__image {
+            padding: 30px 10px;
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+
+        &__info {
+            align-items: center;
+        }
+
+        &__title {
+            font-size: $fontSizeTitle - 0.6;
+            line-height: 1.2;
+        }
+
+        .button {
+            max-width: none !important;
+        }
+    }
+}
+
+@media (max-width: 525px) {
+    .footerBanner {
+        &__title {
+            font-size: $fontSizeTitle - 1.4;
+            margin-bottom: 20px;
+        }
+    }
+}
