@@ -1,17 +1,5 @@
-/*
-	HTML5 Reset :: style.css
-	----------------------------------------------------------
-	We have learned much from/been inspired by/taken code where offered from:
-
-	Eric Meyer					:: https://meyerweb.com
-	HTML5 Doctor				:: https://html5doctor.com
-	and the HTML5 Boilerplate	:: https://html5boilerplate.com
-
--------------------------------------------------------------------------------*/
-/* Let's default this puppy out
--------------------------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+* {
   margin: 0;
   padding: 0;
   border: 0;
@@ -19,45 +7,15 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
   font-weight: normal;
   vertical-align: baseline;
   background: transparent;
+  box-sizing: border-box;
 }
 
-article, aside, figure, footer, header, nav, section, details, summary {
-  display: block;
-}
-
-/* Handle box-sizing while better addressing child elements:
-   https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
-/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
-/* Responsive images and other embedded objects
-*/
 img,
 object,
 embed {
   max-width: 100%;
 }
 
-/*
-   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
-	 In fact, it *will* cause problems with Google Maps' controls at small size.
-	If this is the case for you, try uncommenting the following:
-
-#map img {
-		max-width: none;
-}
-*/
-/* force a vertical scrollbar to prevent a jumpy page */
 html {
   overflow-y: scroll;
 }
@@ -68,7 +26,8 @@ ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
@@ -76,7 +35,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -89,11 +48,17 @@ a {
   text-decoration: none;
 }
 
+.banner-img {
+  width: 500px;
+  border-radius: 50%;
+}
+
 del {
   text-decoration: line-through;
 }
 
-abbr[title], dfn[title] {
+abbr[title],
+dfn[title] {
   border-bottom: 1px dotted #000;
   cursor: help;
 }
@@ -123,7 +88,8 @@ hr {
   padding: 0;
 }
 
-input, select {
+input,
+select {
   vertical-align: middle;
 }
 
@@ -154,7 +120,9 @@ input[type="checkbox"] {
   vertical-align: text-bottom;
 }
 
-select, input, textarea {
+select,
+input,
+textarea {
   font: 99% sans-serif;
 }
 
@@ -171,12 +139,14 @@ strong {
   font-weight: bold;
 }
 
-td, td img {
+td,
+td img {
   vertical-align: top;
 }
 
 /* Make sure sup and sub don't mess with your line-heights https://gist.github.com/413930 */
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -191,28 +161,34 @@ sub {
 }
 
 /* standardize any monospaced elements */
-pre, code, kbd, samp {
+pre,
+code,
+kbd,
+samp {
   font-family: monospace, sans-serif;
 }
 
 /* hand cursor on clickable elements */
 .clickable,
 label,
-input[type=button],
-input[type=submit],
-input[type=file],
+input[type="button"],
+input[type="submit"],
+input[type="file"],
 button {
   cursor: pointer;
 }
 
 /* Webkit browsers add a 2px margin outside the chrome of form elements */
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   margin: 0;
 }
 
 /* make buttons play nice in IE */
 button,
-input[type=button] {
+input[type="button"] {
   width: auto;
   overflow: visible;
 }
@@ -227,7 +203,8 @@ input[type=button] {
 .ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
 */
 /* let's clear some floats */
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
   content: "\0020";
   display: block;
   height: 0;
@@ -248,11 +225,11 @@ input[type=button] {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .header__container {
@@ -275,11 +252,11 @@ input[type=button] {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .header__item {
@@ -288,18 +265,18 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 0 15px;
 }
 
 .header__item p {
   font-family: "Poppins", sans-serif;
   font-size: 1.25rem;
-  color: #2A2850;
+  color: #2a2850;
   width: 100%;
 }
 
@@ -324,8 +301,8 @@ input[type=button] {
   .header__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   .header__logo {
     max-width: 300px;
@@ -349,21 +326,21 @@ input[type=button] {
 }
 
 .banner {
-  background-color: #2A2850;
+  background-color: #2a2850;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 40px 0;
 }
 
@@ -380,11 +357,11 @@ input[type=button] {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -396,19 +373,19 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
   max-width: 485px;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .banner__title {
   font-family: "Poppins", sans-serif;
   font-size: 3rem;
-  color: #6FD2DB;
+  color: #6fd2db;
 }
 
 .banner__text {
@@ -425,11 +402,11 @@ input[type=button] {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 80px 50px;
 }
 
@@ -459,12 +436,12 @@ input[type=button] {
 @media (max-width: 1020px) {
   .banner__container {
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -ms-flex-wrap: wrap-reverse;
-        flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     background-position-y: top;
     background-position-x: right;
     background-size: contain;
@@ -519,14 +496,14 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 100%;
   margin-top: 50px;
 }
@@ -541,7 +518,7 @@ input[type=button] {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 2.5rem;
-  color: #8569D7;
+  color: #8569d7;
 }
 
 .section__benefits {
@@ -551,16 +528,16 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -ms-flex-wrap: wrap-reverse;
-      flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: 50px 0;
 }
 
@@ -572,16 +549,16 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 525px) {
@@ -597,18 +574,18 @@ input[type=button] {
 }
 
 .benefit {
-  border: 2px solid #8569D7;
+  border: 2px solid #8569d7;
   border-radius: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding-top: 30px;
   width: 351px;
   height: 350px;
@@ -623,14 +600,14 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .benefit__icon {
@@ -648,14 +625,14 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 300px;
   padding: 0 5px;
 }
@@ -664,7 +641,7 @@ input[type=button] {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1rem;
-  color: #4F4F4F;
+  color: #4f4f4f;
   margin: 10px 0;
   text-align: center;
 }
@@ -673,7 +650,7 @@ input[type=button] {
   font-family: "Poppins", sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
-  color: #4F4F4F;
+  color: #4f4f4f;
 }
 
 @media (max-width: 380px) {
@@ -695,8 +672,8 @@ input[type=button] {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -717,7 +694,7 @@ input[type=button] {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 1.25rem;
-  color: #4F4F4F;
+  color: #4f4f4f;
   width: 100%;
   max-width: 256px;
   margin-left: 20px;
@@ -746,14 +723,14 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -772,11 +749,11 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   z-index: 1;
   width: 100%;
   max-width: 1200px;
@@ -792,7 +769,7 @@ input[type=button] {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 2.5rem;
-  color: #6FD2DB;
+  color: #6fd2db;
 }
 
 .expertBanner__text {
@@ -835,14 +812,14 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -861,11 +838,11 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   z-index: 1;
   width: 100%;
   max-width: 1200px;
@@ -900,14 +877,14 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .plansContent__container {
@@ -925,7 +902,7 @@ input[type=button] {
 .plansContent__description p {
   font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
-  color: #8569D7;
+  color: #8569d7;
   text-align: left;
   width: 100%;
   max-width: 1000px;
@@ -938,7 +915,7 @@ input[type=button] {
 .plansContent__instructions p {
   font-family: "Poppins", sans-serif;
   font-size: 1.25rem;
-  color: #4F4F4F;
+  color: #4f4f4f;
   margin-top: 20px;
 }
 
@@ -948,8 +925,8 @@ input[type=button] {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding-top: 50px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -963,14 +940,14 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding-top: 80px;
 }
 
@@ -980,7 +957,7 @@ input[type=button] {
   max-width: 480px;
   font-family: "Poppins", sans-serif;
   font-size: 1.25rem;
-  color: #4F4F4F;
+  color: #4f4f4f;
 }
 
 @media (max-width: 1020px) {
@@ -993,10 +970,10 @@ input[type=button] {
   .plansContent__plans {
     padding-top: 30px;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
 
@@ -1049,11 +1026,11 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 100%;
   max-width: 350px;
   margin-right: 10px;
@@ -1071,14 +1048,14 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .plan__icon {
@@ -1086,11 +1063,11 @@ input[type=button] {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: 94px;
   max-width: 94px;
 }
@@ -1106,21 +1083,21 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 100%;
 }
 
 .plan__titles p {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  color: #4F4F4F;
+  color: #4f4f4f;
 }
 
 .plan__type {
@@ -1139,7 +1116,7 @@ input[type=button] {
 
 .plan__content {
   width: 100%;
-  border: 2px solid #6FD2DB;
+  border: 2px solid #6fd2db;
   border-radius: 30px;
   padding: 20px 25px;
   margin-bottom: 30px;
@@ -1153,14 +1130,14 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .plan__list {
@@ -1172,7 +1149,7 @@ input[type=button] {
   font-family: "Poppins", sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
-  color: #4F4F4F;
+  color: #4f4f4f;
   margin-top: 10px;
   padding-left: 1em;
   text-indent: -1em;
@@ -1215,14 +1192,14 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 40px 0;
 }
 
@@ -1234,11 +1211,11 @@ input[type=button] {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -1255,19 +1232,19 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
   max-width: 540px;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .footerBanner__title {
   font-family: "Poppins", sans-serif;
   font-size: 3rem;
-  color: #8569D7;
+  color: #8569d7;
   line-height: 1.25;
   margin-bottom: 40px;
 }
@@ -1277,11 +1254,11 @@ input[type=button] {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 50px 20px;
 }
 
@@ -1296,8 +1273,8 @@ input[type=button] {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   padding-top: 50px;
 }
 
@@ -1328,12 +1305,12 @@ input[type=button] {
   }
   .footerBanner__container {
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -ms-flex-wrap: wrap-reverse;
-        flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     background-position-y: top;
     background-position-x: center;
     background-size: 40%;
@@ -1347,8 +1324,8 @@ input[type=button] {
   }
   .footerBanner__info {
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .footerBanner__title {
     font-size: 2.4rem;
@@ -1367,21 +1344,21 @@ input[type=button] {
 }
 
 .footer {
-  background-color: #2A2850;
+  background-color: #2a2850;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .siteMap {
@@ -1390,11 +1367,11 @@ input[type=button] {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding-bottom: 50px;
 }
 
@@ -1415,7 +1392,7 @@ input[type=button] {
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #F59FAF;
+  color: #f59faf;
 }
 
 .siteMap__content {
@@ -1424,13 +1401,13 @@ input[type=button] {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .siteMap__content--responsive {
@@ -1484,15 +1461,15 @@ input[type=button] {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   .siteMap__content--responsive {
     display: none;
@@ -1510,14 +1487,14 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 10px 0;
 }
 
@@ -1529,11 +1506,11 @@ input[type=button] {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .copyRight__container img {
@@ -1545,7 +1522,7 @@ input[type=button] {
   font-family: "Poppins", sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
-  color: #2A2850;
+  color: #2a2850;
   white-space: nowrap;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1580,14 +1557,14 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .form__container {
@@ -1598,11 +1575,11 @@ input[type=button] {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -1613,20 +1590,20 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
   max-width: 560px;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .form__title {
   font-family: "Poppins", sans-serif;
   font-size: 2.375rem;
   font-weight: 700;
-  color: #8569D7;
+  color: #8569d7;
 }
 
 .form__text {
@@ -1646,21 +1623,27 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-top: 20px;
 }
 
-.form__image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+
+.form-image {
+  position: relative;
+  border-radius: 174px 6px 174px 5px;
+  box-shadow: 10px 14px 33px 8px rgba(0, 0, 0, 0.75);
+  width: 600px;
+}
+
+.svg-image {
+  position: absolute;
+  bottom: -222px;
+  right: 40px;
+  width: 600px;
+  height: 400px;
+  border-radius: 174px 6px 174px 5px;
+  border: 8px solid #870066;
 }
 
 .form .button {
@@ -1675,20 +1658,20 @@ input[type=button] {
   }
   .form__container {
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     padding-top: 40px;
     padding-bottom: 20px;
   }
   .form__info {
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .form__title {
     font-size: 1.875rem;
@@ -1750,17 +1733,17 @@ input[type=button] {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   width: 100%;
 }
 
@@ -1768,23 +1751,23 @@ input[type=button] {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
-  color: #F59FAF;
+  color: #f59faf;
   margin-right: 20px;
 }
 
 .note__message {
-  background-color: #F59FAF;
+  background-color: #f59faf;
   padding: 10px 15px;
   border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: 10px 0;
   width: 100%;
   max-width: 375px;
@@ -1809,14 +1792,14 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .modal__container {
@@ -1827,14 +1810,14 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .modal__box {
@@ -1847,14 +1830,14 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   position: relative;
 }
 
@@ -1864,14 +1847,14 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 100%;
   padding: 40px 20px;
 }
@@ -1880,7 +1863,7 @@ input[type=button] {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 2.25rem;
-  color: #8569D7;
+  color: #8569d7;
   width: 100%;
   max-width: 475px;
   text-align: center;
@@ -1889,7 +1872,7 @@ input[type=button] {
 .modal__text {
   font-family: "Poppins", sans-serif;
   font-size: 1.25rem;
-  color: #4F4F4F;
+  color: #4f4f4f;
 }
 
 .modal__closeBtn {
@@ -1924,7 +1907,7 @@ input[type=button] {
 .button {
   outline: none;
   border: none;
-  border-radius: 30px;
+  border-radius: 20px;
   padding: 15px 30px;
   width: 100%;
   max-width: 345px;
@@ -1944,39 +1927,39 @@ input[type=button] {
 }
 
 .button--yellow {
-  background-color: #F8DC71;
+  background-color: #1b0031;
 }
 
 .button--yellow p {
-  color: #8569D7;
+  color: white;
 }
 
 .button--yellow:hover {
-  background-color: #8569D7;
+  background-color: #8569d7;
   -webkit-transition: all ease-in 0.2s;
   transition: all ease-in 0.2s;
 }
 
 .button--yellow:hover p {
-  color: #F8DC71;
+  color: #f8dc71;
 }
 
 .button--purple {
-  background-color: #8569D7;
+  background-color: #8569d7;
 }
 
 .button--purple p {
-  color: #F8DC71;
+  color: #f8dc71;
 }
 
 .button--purple:hover {
-  background-color: #F8DC71;
+  background-color: #f8dc71;
   -webkit-transition: all ease-in 0.2s;
   transition: all ease-in 0.2s;
 }
 
 .button--purple:hover p {
-  color: #8569D7;
+  color: #8569d7;
 }
 
 /*@media (max-width: 1000px) {
@@ -1990,8 +1973,8 @@ input[type=button] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
   margin-bottom: 30px;
 }
@@ -2000,15 +1983,15 @@ input[type=button] {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
-  color: #6FD2DB;
+  color: #6fd2db;
 }
 
 .input input {
   margin-top: 10px;
   font-family: "Poppins", sans-serif;
   font-size: 1.125rem;
-  color: #4F4F4F;
-  border: 2px solid #8569D7;
+  color: #4f4f4f;
+  border: 2px solid #8569d7;
   outline: none;
   border-radius: 13px;
   padding: 15px 26px;
@@ -2030,7 +2013,8 @@ input[type=button] {
   color: #909090;
 }
 
-html, body {
+html,
+body {
   width: 100%;
 }
 
@@ -2041,15 +2025,15 @@ html, body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .main--darkBlue {
-  background-color: #2A2850;
+  background-color: #2a2850;
 }
 
 .noOverflow {
