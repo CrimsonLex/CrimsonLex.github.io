@@ -1,0 +1,46 @@
+@import "reset";
+@import "fonts";
+@import "colors";
+@import "measure";
+@import "header";
+@import "banner";
+@import "section";
+@import "benefit";
+@import "requirement";
+@import "expertBanner";
+@import "plansBanner";
+@import "plansContent";
+@import "plan";
+@import "footerBanner";
+@import "footer";
+@import "siteMap";
+@import "copyRight";
+@import "form";
+@import "note";
+@import "modal";
+@import "button";
+@import "input";
+
+html, body {
+    width: 100%;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--darkBlue {
+        background-color: $darkBlue;
+    }
+}
+
+.noOverflow {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.hidden {
+    display: none;
+}

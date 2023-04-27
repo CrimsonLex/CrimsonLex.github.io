@@ -1,0 +1,145 @@
+.banner {
+    background-color: $darkBlue;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+
+    &__container {
+        background-image: url("./../../public/img/bannerbg.svg");
+        background-position-x: right;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        max-width: $containerMaxWidth;
+        padding: $containerPadding;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: fit-content;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 485px;
+        justify-content: center;
+    }
+
+    &__title {
+        font-family: $poppinsFont;
+        font-size: $fontSizeTitle;
+        color: $cyan;
+    }
+
+    &__text {
+        font-family: $poppinsFont;
+        font-size: $fontSizeText;
+        color: white;
+        margin: 30px 0;
+        width: 100%;
+        max-width: 411px;
+    }
+
+    &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 80px 50px;
+    }
+
+    &__transition {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1170px) {
+    .banner__image {
+        padding: 50px 30px;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1060px) {
+    .banner__image {
+        img {
+            width: 90%;
+        }
+    }
+}
+
+@media (max-width: 1020px) {
+    .banner {
+        &__container {
+            flex-wrap: wrap;
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+            background-position-y: top;
+            background-position-x: right;
+            background-size: contain;
+            padding-bottom: 40px;
+        }
+
+        &__title {
+            font-size: $fontSizeTitle - 0.5;
+            line-height: 1.2;
+        }
+
+        &__image {
+            padding: 30px 20px;
+        }
+
+        &__text {
+            width: 100%;
+            max-width: none;
+            margin: 20 0px;
+        }
+    }
+}
+
+@media (max-width: 999px) {
+    .banner {
+        &__container {
+            background-size: 500px;
+            background-position-x: center;
+        }
+        &__title {
+            font-size: $fontSizeTitle - 0.5;
+            line-height: 1.2;
+        }
+        
+        .button {
+            max-width: none !important;
+        }
+    }
+}
+
+@media (max-width: 525px) {
+    .banner {
+        &__container {
+            background-size: 420px;
+        }
+        &__title {
+            font-size: $fontSizeTitle - 1.2;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .banner {
+        &__container {
+            background-size: 330px;
+        }
+    }
+}

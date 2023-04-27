@@ -1,0 +1,52 @@
+.button {
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    padding: 15px 30px;
+    width: 100%;
+    max-width: 345px;
+    transition: all ease-in 0.2s;
+    display: flex;
+
+    p {
+        font-family: $poppinsFont;
+        font-weight: $semibold;
+        font-size: $fontSizeHeader;
+        text-align: center;
+        width: 100%;
+    }
+
+    &--yellow {
+        background-color: #5d005e;
+
+        p {
+            color: white;
+        }
+
+        &:hover {
+            background-color: $purple;
+            p {
+                color: $yellow;
+            }
+    
+            transition: all ease-in 0.2s;
+        }
+    }
+
+    &--purple {
+        background-color: $purple;
+
+        p {
+            color: $yellow;
+        }
+
+        &:hover {
+            background-color: $yellow;
+            p {
+                color: $purple;
+            }
+    
+            transition: all ease-in 0.2s;
+        }
+    }
+}

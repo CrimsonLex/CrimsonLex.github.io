@@ -1,0 +1,147 @@
+.plansContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__container {
+        width: 100%;
+        max-width: $containerMaxWidth;
+        padding: $containerPadding;
+        padding-top: 50px;
+    }
+
+    &__description {
+        width: 100%;
+        padding-bottom: 20px;
+        p {
+            font-family: $poppinsFont;
+            font-size: $fontSizeExpertTitle;
+            color: $purple;
+            text-align: left;
+            width: 100%;
+            max-width: 1000px;
+        }
+    }
+
+    &__instructions {
+        width: 100%;
+
+        p {
+            font-family: $poppinsFont;
+            font-size: $fontSizeRequirement;
+            color: $darkGray;
+            margin-top: 20px;
+        }
+    }
+
+    &__plans {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 50px;
+        height: fit-content;
+    }
+
+    &__reminder {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 80px;
+
+        p {
+            text-align: center;
+            width: 100%;
+            max-width: 480px;
+            font-family: $poppinsFont;
+            font-size: $fontSizeRequirement;
+            color: $darkGray;
+        }
+    }
+}
+
+@media (max-width: 1020px) {
+    .plansContent {
+        &__description {
+            p {
+                font-size: $fontSizeExpertTitle - 0.8;
+            }
+        }
+    }
+}
+
+@media (max-width: 731px) {
+    .plansContent {
+        &__plans {
+            padding-top: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .plansContent {
+        &__container {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        &__description {
+            p {
+                font-size: $fontSizeExpertTitle - 1;
+            }
+        }
+
+        &__instructions {
+            p {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 689px) {
+    .plansContent {
+        &__reminder {
+            padding-top: 20px;
+        }
+    }
+}
+
+@media (max-width: 610px) {
+    .plansContent {
+        &__description {
+            padding-bottom: 0;
+            p {
+                font-size: $fontSizeExpertTitle - 1.2;
+            }
+        }
+
+        &__instructions {
+            p {
+                font-size: $fontSizeRequirement - 0.3;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .plansContent {
+        &__description {
+            padding-bottom: 0;
+            p {
+                font-size: $fontSizeExpertTitle - 1.5;
+            }
+        }
+
+        &__instructions {
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
