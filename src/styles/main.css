@@ -326,7 +326,7 @@ input[type="button"] {
 }
 
 .banner {
-  background-color: #2a2850;
+  background: #2a2850;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1392,7 +1392,7 @@ input[type="button"] {
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #f59faf;
+  color: #6fd2db;
 }
 
 .siteMap__content {
