@@ -1,165 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
-    <link rel="stylesheet" href="./src/styles/main.css">
-    <link rel="shortcut icon" href="/img/logos/logo-redondo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./src/styles/main.css" />
+    <link
+      rel="shortcut icon"
+      href="/img/logos/logo-redondo.svg"
+      type="image/x-icon"
+    />
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLR51XN4ZF"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-KLR51XN4ZF"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-KLR51XN4ZF');
+      gtag("config", "G-KLR51XN4ZF");
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <article class="header__container">
-            <a href="index.html" class="header__logo">
-                <img src="/img/logos/logo2-white.svg" alt="" height="130">
-            </a>
-            <nav class="header__nav">
-                <a class="header__item" href="index.html">
-                    <p>Inicio</p>
-                </a>
-                <a href="form.html" class="header__item"><img src="/img/searchiconheader.svg" alt=""></a>
-                <a href="form.html" class="header__item"><img src="/img/usericonheader.svg" alt=""></a>
-            </nav>
-        </article>
+      <article class="header__container">
+        <a href="index.html" class="header__logo">
+          <img src="/img/logos/logo2-white.svg" alt="" height="130" />
+        </a>
+        <nav class="header__nav">
+          <a class="header__item" href="index.html">
+            <p>Inicio</p>
+          </a>
+          <a href="form.html" class="header__item"
+            ><img src="/img/searchiconheader.svg" alt=""
+          /></a>
+          <a href="form.html" class="header__item"
+            ><img src="/img/usericonheader.svg" alt=""
+          /></a>
+        </nav>
+      </article>
     </header>
     <main class="main main--darkBlue">
-        <form class="form">
-            <article class="form__container">
-                <section class="form__info">
-                    <h2 class="form__title">
-                        ¡Te damos la bienvenida a nuestra comunidad!
-                    </h2>
-                    <p class="form__text">
-                        ¡Aún no estamos en tu zona! Dejanos tus datos para avisarte cuanto antes
-                        cuando estemos disponibles uwu
-                    </p>
-                    <section class="note">
-                        <p class="note__title">Nota:</p>
-                        <div class="note__message">
-                            <p>Tranquilx 😊 no te molestaremos con tanta información agobiante de publicidad. </p>
-                        </div>
-                    </section>
-                    <section class="form__fields">
-                        <div class="input">
-                            <label for="name">Nombre</label>
-                            <input type="text" name="name" id="" placeholder="Nombre completo" required>
-                        </div>
-                        <div class="input">
-                            <label for="email">Correo</label>
-                            <input type="email" name="email" id="" placeholder="Correo electrónico" required>
-                        </div>
-                        <div class="input">
-                            <label for="age">Edad</label>
-                            <input type="text" name="age" id="" placeholder="Edad" required>
-                        </div>
-                        <div class="input">
-                            <label for="ciudad">Ciudad</label>
-                            <input type="text" name="ciudad" id="" placeholder="Ej: Cali" required>
-                        </div>
-                    </section>
-                    <button class="button button--yellow form__btn">
-                        <p>Estoy interesadx en recibir información</p>
-                    </button>
-                </section>
-                <section class="form__image">
-                    
-                    <div class="svg-image">
-                    </div>
-                    <img class="form-image" src="/img/amigos-felices.jpg" alt="">
-                </section>
-            </article>
-        </form>
+      <form class="form" id="formUser">
+        <article class="form__container">
+          <section class="form__info">
+            <h2 class="form__title">
+              ¡Te damos la bienvenida a nuestra comunidad!
+            </h2>
+            <p class="form__text">
+              ¡Aún no estamos en tu zona! Dejanos tus datos para avisarte cuanto
+              antes cuando estemos disponibles uwu
+            </p>
+            <section class="note">
+              <p class="note__title">Nota:</p>
+              <div class="note__message">
+                <p>
+                  Tranquilx 😊 no te molestaremos con tanta información
+                  agobiante de publicidad.
+                </p>
+              </div>
+            </section>
+            <section class="form__fields">
+              <div class="input">
+                <label for="name">Nombre</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Nombre completo"
+                  required
+                />
+              </div>
+              <div class="input">
+                <label for="email">Correo</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Correo electrónico"
+                  required
+                />
+              </div>
+              <div class="input">
+                <label for="age">Edad</label>
+                <input
+                  type="text"
+                  name="age"
+                  id="age"
+                  placeholder="Edad"
+                  required
+                />
+              </div>
+              <div class="input">
+                <label for="ciudad">Ciudad</label>
+                <input
+                  type="text"
+                  name="ciudad"
+                  id="city"
+                  placeholder="Ej: Cali"
+                  required
+                />
+              </div>
+            </section>
+            <button class="button button--yellow form__btn" id="interestedBtn">
+              <p>Estoy interesadx en recibir información</p>
+            </button>
+          </section>
+          <section class="form__image">
+            <div class="svg-image"></div>
+            <img class="form-image" src="/img/amigos-felices.jpg" alt="" />
+          </section>
+        </article>
+      </form>
     </main>
     <div class="modal hidden">
-        <section class="modal__container">
-            <section class="modal__box">
-                <section class="modal__content">
-                    <h4 class="modal__title">
-                        ¡Tu información ha sido registrada con éxito!
-                    </h4>
-                    <img class="modal__emoji" src="/img/emoji.svg" alt="Happy">
-                    <p class="modal__text">
-                        Pronto recibirás un correo con toda la información respectiva
-                    </p>
-                </section>
-                <div class="modal__closeBtn">
-                    <img src="/img/equis.svg" alt="">
-                </div>
-            </section>
+      <section class="modal__container">
+        <section class="modal__box">
+          <section class="modal__content">
+            <h4 class="modal__title">
+              ¡Tu información ha sido registrada con éxito!
+            </h4>
+            <img class="modal__emoji" src="/img/emoji.svg" alt="Happy" />
+            <p class="modal__text">
+              Pronto recibirás un correo con toda la información respectiva
+            </p>
+          </section>
+          <div class="modal__closeBtn">
+            <img src="/img/equis.svg" alt="" />
+          </div>
         </section>
+      </section>
     </div>
     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-analytics.js";
-        import { getFirestore } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-firestore.js";
-        import { collection, doc, addDoc, setDoc, query, where, getDocs } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-firestore.js";
+      import { initializeApp } from "firebase/app";
+      import {
+        getFirestore,
+        doc,
+        updateDoc,
+        increment,
+        setDoc,
+      } from "firebase/firestore";
 
-        const firebaseConfig = {
-            apiKey: "AIzaSyB1s9J_ZqnSv02_-Ip02G_7JwEB8F83Row",
-            authDomain: "space-glam.firebaseapp.com",
-            projectId: "space-glam",
-            storageBucket: "space-glam.appspot.com",
-            messagingSenderId: "118360549803",
-            appId: "1:118360549803:web:d65db5cec9c15414e9caee",
-            measurementId: "G-QZQRSD2RW3"
-        };
+      const firebaseConfig = {
+        apiKey: "AIzaSyC9fE3Izyd0YsmMG9ArFUuqAtIZsYQzPJQ",
+        authDomain: "planify-93ca2.firebaseapp.com",
+        projectId: "planify-93ca2",
+        storageBucket: "planify-93ca2.appspot.com",
+        messagingSenderId: "353057198767",
+        appId: "1:353057198767:web:3f28e6c95a604537e33a5a",
+      };
 
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-        const db = getFirestore(app);
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
 
-        const body = document.querySelector("body")
-        const modal = document.querySelector(".modal")
-        const modalcloseBtn = modal.querySelector(".modal__closeBtn")
-        const form = document.querySelector(".form")
-        const submitBtn = form.querySelector(".form__btn")
+      const body = document.querySelector("body");
+      const modal = document.querySelector(".modal");
+      const modalcloseBtn = modal.querySelector(".modal__closeBtn");
+      const form = document.querySelector(".form");
+      const submitBtn = form.querySelector(".form__btn");
 
-        modalcloseBtn.addEventListener('click', () => {
-            modal.classList.add("hidden")
-            body.classList.remove("noOverflow")
-        })
+      modalcloseBtn.addEventListener("click", () => {
+        modal.classList.add("hidden");
+        body.classList.remove("noOverflow");
+      });
 
-        async function register(newName, newEmail) {
-            try {
-                const docRef = await addDoc(collection(db, "users"), {
-                    username: newName,
-                    useremail: newEmail,
-                    date: Date.now()
-                });
-                //console.log("Document written with ID: ", docRef.id);
-            } catch (e) {
-                //console.error("Error adding document: ", e);
-            }
-        }
+      async function register(nameD, emailD, cityD, ageD) {
+        await setDoc(doc(db, "users", generarId()), {
+          name: nameD,
+          email: emailD,
+          age: ageD,
+          city: cityD,
+        });
+      }
 
-        form.addEventListener('submit', (event) => {
-            event.preventDefault()
-            const name = form.name.value
-            const email = form.email.value
-            submitBtn.disabled = true;
-            register(name, email).then((ref) => {
-                submitBtn.disabled = false;
-                modal.classList.remove("hidden")
-                body.classList.add("noOverflow")
-                form.name.value = ""
-                form.email.value = ""
-            });
-        })
-        
-        /*let userList = []
+      function generarId() {
+        var numeroAleatorio = Math.random().toString(36).substr(2, 9);
+        var fechaActual = Date.now().toString(36).substr(2, 9);
+        var id = numeroAleatorio + fechaActual;
+        return id;
+      }
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const name = form.name.value;
+        const email = form.email.value;
+        const age = form.age.value;
+        const city = form.city.value;
+        submitBtn.disabled = true;
+        register(name, email, city, age).then((ref) => {
+          submitBtn.disabled = false;
+          modal.classList.remove("hidden");
+          body.classList.add("noOverflow");
+          form.name.value = "";
+          form.email.value = "";
+        });
+      });
+
+      /*let userList = []
         const q = query(collection(db, "users"))
         const querySnapshot = await getDocs(q);
         querySnapshot.forEach((doc) => {
@@ -168,6 +212,6 @@
         });
         console.log(userList.length)*/
     </script>
-</body>
-
+    <script type="module" src="./src/js/interested.js"></script>
+  </body>
 </html>
