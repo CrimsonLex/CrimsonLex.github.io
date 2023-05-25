@@ -114,7 +114,11 @@
           </section>
           <section class="form__image">
             <div class="svg-image"></div>
-            <img class="form-image" src="/public/img/amigos-felices.jpg" alt="" />
+            <img
+              class="form-image"
+              src="/public/img/amigos-felices.jpg"
+              alt=""
+            />
           </section>
         </article>
       </form>
@@ -138,14 +142,14 @@
       </section>
     </div>
     <script type="module">
-      import { initializeApp } from "firebase/app";
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
       import {
         getFirestore,
         doc,
         updateDoc,
         increment,
         setDoc,
-      } from "firebase/firestore";
+      } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 
       const firebaseConfig = {
         apiKey: "AIzaSyC9fE3Izyd0YsmMG9ArFUuqAtIZsYQzPJQ",
